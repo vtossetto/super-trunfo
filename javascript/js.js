@@ -28,17 +28,37 @@ var carta3 = {
   }
 };
 
+var carta4 = {
+  nome: "Jack Sparrow",
+  imagem: "https://disneyplusbrasil.com.br/wp-content/uploads/2021/09/Johnny-Depp-Jack-Sparrow.jpg",
+  atributos: {
+    ataque: 6,
+    defesa: 7,
+    magia: 8
+  }
+};
+
+var carta5 = {
+  nome: "Wolverine",
+  imagem: "https://t2.tudocdn.net/563780?w=550&h=550",
+  atributos: {
+    ataque: 10,
+    defesa: 8,
+    magia: 4
+  }
+};
+
 var cartaMaquina;
 var cartaJogador;
-var cartas = [carta1, carta2, carta3];
+var cartas = [carta1, carta2, carta3, carta4, carta5];
 
 function sortearCarta() {
-  var numeroCartaMaquina = parseInt(Math.random() * 3);
+  var numeroCartaMaquina = parseInt(Math.random() * 5);
   cartaMaquina = cartas[numeroCartaMaquina];
 
-  var numeroCartaJogador = parseInt(Math.random() * 3);
+  var numeroCartaJogador = parseInt(Math.random() * 5);
   while (numeroCartaJogador == numeroCartaMaquina) {
-    numeroCartaJogador = parseInt(Math.random() * 3);
+    numeroCartaJogador = parseInt(Math.random() * 5);
   }
   cartaJogador = cartas[numeroCartaJogador];
   console.log(cartaJogador);
